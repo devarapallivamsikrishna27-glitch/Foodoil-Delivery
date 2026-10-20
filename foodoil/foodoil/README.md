@@ -1,4 +1,10 @@
-# FoodOil - Online Cooking Oil Home Delivery Website
+# FoodOil Delivery
+
+Online Food Oil Home Delivery Web Application.
+
+**Live Website:** https://foodoil-delivery.infinityfree.me/foodoil/
+
+**Technologies:** PHP, MySQL, HTML, CSS, JavaScript.# FoodOil - Online Cooking Oil Home Delivery Website
 
 A responsive e-commerce website for ordering cooking oils, built as a college-level full-stack project.
 
