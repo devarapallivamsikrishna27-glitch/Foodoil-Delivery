@@ -1,0 +1,42 @@
+/* FoodOil - responsive rules (tablet <= 992px, mobile <= 640px) */
+@media (max-width: 992px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .catalog { grid-template-columns: 1fr; }
+  .catalog-side { position: static; padding: 12px; }
+  .cat-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; } .cat-list li { flex: none; } .cat-list a { white-space: nowrap; border: 1px solid var(--border); margin: 0; }
+  .side-title { display: none; }
+  .hero-grid { grid-template-columns: 1fr; text-align: left; } .hero-art { order: -1; } .hero-art img { max-height: 260px; margin: 0 auto; } .hero-copy { padding-bottom: 34px; } .hero-copy h1 { font-size: 2.1rem; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 10px; }
+  .review-grid, .value-grid { grid-template-columns: 1fr 1fr; }
+  .detail-grid, .checkout-grid, .two-col { grid-template-columns: 1fr; }
+  .summary-card { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .auth-split { grid-template-columns: 1fr; } .auth-art { min-height: 260px; padding: 30px 24px; } .auth-art-copy h2 { font-size: 2rem; }
+  .menu-toggle { display: inline-flex; }
+  .main-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; flex-direction: column; gap: 0; margin: 0; padding: 8px 20px 16px; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-hover); }
+  .nav-open .main-nav { display: flex; } .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--border); }
+}
+@media (max-width: 640px) {
+  body { font-size: 14.5px; } h1 { font-size: 1.5rem; }
+  .container { padding: 0 14px; } .section { padding: 30px 0; }
+  .hero-copy h1 { font-size: 1.75rem; } .hero-sub { font-size: 1rem; }
+  .logo-tag { display: none; } .logo-name { font-size: 1.25rem; }
+  .product-grid { gap: 12px; } .product-card-img img { height: 118px; } .product-card-body { padding: 10px 12px 12px; } .product-card .btn { padding: 8px; font-size: .85rem; }
+  .catalog-toolbar { flex-direction: column; align-items: stretch; gap: 10px; } .sort-field { justify-content: space-between; } .sort-field select { flex: 1; }
+  .review-grid, .value-grid, .benefit-row { grid-template-columns: 1fr 1fr; } .review-grid { grid-template-columns: 1fr; }
+  .promo-banner { padding: 24px 20px; } .detail-actions .btn { min-width: 0; }
+  .form-grid, .form-grid.cols-3 { grid-template-columns: 1fr; } .span-2, .span-3 { grid-column: auto; }
+  .footer-grid { grid-template-columns: 1fr; gap: 22px; } .footer-bottom .container { flex-direction: column; }
+  .tracker li { font-size: .7rem; } .tracker-dot { width: 36px; height: 36px; } .tracker::before { top: 18px; }
+  /* cart: stack rows as cards */
+  .cart-head { display: none; }
+  .cart-row { grid-template-columns: 1fr auto; grid-template-areas: 'prod remove' 'price price' 'qty qty' 'total total'; gap: 8px 12px; padding: 16px; }
+  .cart-prod { grid-area: prod; } .cart-remove { grid-area: remove; } .cart-row > :nth-child(2) { grid-area: price; } .cart-row > :nth-child(3) { grid-area: qty; } .cart-row > :nth-child(4) { grid-area: total; }
+  .cart-row .cart-cell { display: flex; justify-content: space-between; align-items: center; } .cart-row .cart-cell::before { content: attr(data-label); color: var(--muted); font-size: .82rem; }
+  .cart-summary { width: 100%; }
+  /* tables become cards */
+  .responsive-table thead { display: none; } .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td { display: block; width: 100%; }
+  .responsive-table tr { border-top: 8px solid var(--grey); padding: 8px 0; } .responsive-table tr:first-child { border-top: 0; }
+  .responsive-table td { border: 0; display: flex; justify-content: space-between; gap: 16px; padding: 6px 16px; text-align: right; } .responsive-table td::before { content: attr(data-label); color: var(--muted); font-size: .8rem; text-align: left; }
+  .toast-wrap { left: 14px; right: 14px; bottom: 14px; }
+}

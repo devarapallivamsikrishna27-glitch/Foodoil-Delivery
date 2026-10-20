@@ -1,0 +1,45 @@
+/* FoodOil - admin panel (uses style.css tokens) */
+.admin-body { background: var(--grey); }
+.admin-shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+.admin-side { background: #0E2347; color: #C9D6EC; display: flex; flex-direction: column; padding: 22px 14px; position: sticky; top: 0; height: 100vh; }
+.admin-brand { color: #fff; font-weight: 700; font-size: 1.15rem; padding: 4px 12px 22px; }
+.admin-side nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.admin-side a { color: #C9D6EC; display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 9px; font-size: .9rem; }
+.admin-side a i { width: 18px; text-align: center; opacity: .85; } .admin-side a:hover { background: rgba(255, 255, 255, .07); text-decoration: none; color: #fff; }
+.admin-side a.active { background: var(--blue); color: #fff; font-weight: 600; }
+.admin-logout { color: #FF8A98 !important; }
+.admin-main { min-width: 0; }
+.admin-top { display: flex; align-items: center; gap: 14px; background: #fff; border-bottom: 1px solid var(--border); padding: 16px 28px; position: sticky; top: 0; z-index: 20; }
+.admin-top h1 { margin: 0; font-size: 1.35rem; flex: 1; } .admin-user { color: var(--muted); font-size: .88rem; } .admin-menu-btn { display: none; }
+.admin-content { padding: 24px 28px 48px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 22px; }
+.stat-card { border-radius: var(--radius); padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; border: 1px solid rgba(16, 43, 92, .06); }
+.stat-card .stat-label { font-size: .8rem; font-weight: 500; } .stat-card strong { font-size: 1.9rem; color: var(--navy); line-height: 1.2; } .stat-card small { color: var(--muted); font-size: .78rem; }
+.stat-card.blue { background: #EAF3FF; } .stat-card.blue .stat-label { color: var(--blue); }
+.stat-card.green { background: #E4F6EE; } .stat-card.green .stat-label { color: #136B47; }
+.stat-card.orange { background: #FFF2E3; } .stat-card.orange .stat-label { color: #B35A00; }
+.stat-card.purple { background: #EFEAFF; } .stat-card.purple .stat-label { color: #5B3FD0; }
+.panel { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 22px; box-shadow: var(--shadow); }
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.panel-head h2 { margin: 0; font-size: 1.05rem; } .panel .table-wrap { border: 0; border-radius: 0 0 var(--radius) var(--radius); }
+.inline-form { display: inline-flex; gap: 6px; align-items: center; } .inline-form select { width: auto; padding: 6px 8px; font-size: .85rem; }
+.stock-input { width: 76px !important; padding: 6px 8px !important; font-size: .88rem !important; } .stock-input.low { border-color: #F0C36D; background: #FFFAEB; }
+.cell-prod { display: flex; align-items: center; gap: 12px; } .cell-prod img { width: 38px; height: 46px; object-fit: contain; background: var(--grey); border-radius: 6px; padding: 3px; }
+.actions { white-space: nowrap; } .actions .btn, .actions .inline-form { vertical-align: middle; margin-right: 4px; }
+.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; width: 100%; } .filter-bar input { flex: 1; min-width: 200px; } .filter-bar select { width: auto; }
+.addr summary { cursor: pointer; color: var(--blue); font-size: .8rem; } .addr { font-size: .82rem; max-width: 260px; }
+.report-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.report-list li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 20px; border-top: 1px solid var(--border); font-size: .9rem; } .report-list li:first-child { border-top: 0; }
+.report-list li.with-bar { flex-wrap: wrap; } .meter { flex-basis: 100%; height: 6px; background: var(--light-blue); border-radius: 3px; overflow: hidden; } .meter span { display: block; height: 100%; background: var(--blue); }
+.bar-chart { display: flex; align-items: flex-end; gap: 6px; height: 230px; padding: 24px 20px 8px; }
+.bar-col { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; min-width: 0; }
+.bar { width: 100%; max-width: 34px; background: var(--blue); border-radius: 5px 5px 0 0; min-height: 2px; } .bar-val { font-size: .62rem; color: var(--muted); white-space: nowrap; } .bar-label { font-size: .68rem; color: var(--muted); white-space: nowrap; }
+.message-list li { padding: 16px 20px; border-top: 1px solid var(--border); } .message-list li:first-child { border-top: 0; } .message-list p { margin: 6px 0 0; } .msg-head { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.admin-content .form-grid { gap: 0 18px; }
+@media (max-width: 992px) {
+  .admin-shell { grid-template-columns: 1fr; }
+  .admin-side { position: fixed; left: 0; top: 0; bottom: 0; width: 250px; z-index: 100; transform: translateX(-100%); transition: transform .2s; } .admin-side.open { transform: none; }
+  .admin-menu-btn { display: inline-flex; } .stat-grid { grid-template-columns: repeat(2, 1fr); } .report-grid { grid-template-columns: 1fr; }
+  .admin-top, .admin-content { padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 560px) { .stat-grid { grid-template-columns: 1fr; } .bar-val { display: none; } .admin-user { display: none; } }
